@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pink Heart Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calc">
+    <img src="calculator.png" alt="Pink pixel-art heart calculator">
+
+    <div class="screen">
+      <div class="expr"><span id="expr"></span></div>
+      <div class="result" id="result">0</div>
+    </div>
+
+    <button class="key rect" data-key="C" aria-label="clear" style="left:7.36%; top:30.72%; width:18.41%; height:10.47%"></button>
+    <button class="key rect" data-key="()" aria-label="parentheses" style="left:29.45%; top:30.72%; width:18.41%; height:10.47%"></button>
+    <button class="key rect" data-key="back" aria-label="backspace" style="left:51.87%; top:30.72%; width:17.74%; height:10.47%"></button>
+    <button class="key rect" data-key="/" aria-label="divide" style="left:73.63%; top:30.72%; width:18.07%; height:10.47%"></button>
+
+    <button class="key heart" data-key="7" aria-label="7" style="left:7.36%; top:43.01%; width:19.08%; height:12.52%"></button>
+    <button class="key heart" data-key="8" aria-label="8" style="left:29.45%; top:43.01%; width:18.74%; height:12.52%"></button>
+    <button class="key heart" data-key="9" aria-label="9" style="left:51.2%; top:43.01%; width:18.74%; height:12.52%"></button>
+    <button class="key rect" data-key="*" aria-label="multiply" style="left:73.63%; top:43.47%; width:18.07%; height:10.47%"></button>
+
+    <button class="key heart" data-key="4" aria-label="4" style="left:7.36%; top:55.3%; width:19.08%; height:12.52%"></button>
+    <button class="key heart" data-key="5" aria-label="5" style="left:29.45%; top:55.3%; width:18.74%; height:12.52%"></button>
+    <button class="key heart" data-key="6" aria-label="6" style="left:51.2%; top:55.3%; width:18.74%; height:12.52%"></button>
+    <button class="key rect" data-key="-" aria-label="minus" style="left:73.63%; top:55.76%; width:18.07%; height:10.7%"></button>
+
+    <button class="key heart" data-key="1" aria-label="1" style="left:7.36%; top:67.59%; width:19.08%; height:12.74%"></button>
+    <button class="key heart" data-key="2" aria-label="2" style="left:29.45%; top:67.59%; width:18.74%; height:12.74%"></button>
+    <button class="key heart" data-key="3" aria-label="3" style="left:51.2%; top:67.59%; width:18.74%; height:12.74%"></button>
+    <button class="key rect" data-key="+" aria-label="plus" style="left:73.63%; top:68.05%; width:18.07%; height:10.7%"></button>
+
+    <button class="key rect" data-key="%" aria-label="percent" style="left:7.36%; top:81.7%; width:18.41%; height:10.92%"></button>
+    <button class="key heart" data-key="0" aria-label="0" style="left:29.45%; top:81.7%; width:18.41%; height:10.92%"></button>
+    <button class="key rect" data-key="." aria-label="decimal" style="left:51.87%; top:81.7%; width:17.74%; height:10.92%"></button>
+    <button class="key rect" data-key="=" aria-label="equals" style="left:73.63%; top:81.7%; width:18.07%; height:10.92%"></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
