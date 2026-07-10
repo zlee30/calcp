@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fae8ed; /* change this to any color - the calculator has no white box around it anymore */
+  background: #fbe4ea url('background.jpg') center / cover no-repeat fixed; /* cat plushie wallpaper; the color shows while the image loads */
   font-family: "Courier New", Courier, monospace;
   padding: 12px;
 }
@@ -21,7 +21,8 @@ body {
 /* ---- Calculator (image + overlays) ---- */
 .calc {
   position: relative;
-  width: min(92vw, 500px);
+  width: min(92vw, 400px);
+  container-type: inline-size; /* lets the display digits scale with the calculator */
   user-select: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -36,7 +37,7 @@ body {
   }
 }
 
-.calc img {
+.calc > img {
   display: block;
   width: 100%;
   height: auto;
@@ -60,7 +61,8 @@ body {
   width: 100%;
   text-align: right;
   font-family: 'PixelLCD', "Courier New", monospace;
-  font-size: clamp(20px, 6vw, 28px);
+  font-size: 19px;      /* fallback for older browsers */
+  font-size: 4.8cqw;    /* 4.8% of the calculator's width - just under button-digit size */
   color: #b96a8c;
   white-space: nowrap;
   overflow: hidden;
@@ -72,12 +74,24 @@ body {
   width: 100%;
   text-align: right;
   font-family: 'PixelLCD', "Courier New", monospace;
-  font-size: clamp(36px, 12vw, 56px);
+  font-size: 31px;      /* fallback for older browsers */
+  font-size: 7.8cqw;    /* a bit larger than the button digits, for readability */
   color: #a24d72;
-  letter-spacing: 3px;
+  letter-spacing: 0;
   white-space: nowrap;
   overflow: hidden;
 }
+
+
+/* ---- Artwork glyphs on the display ---- */
+.expr img.g, .result img.g {
+  display: inline-block;
+  height: 1em;              /* scales with the font-size of each line */
+  width: auto;
+  vertical-align: baseline;
+  margin: 0 0.04em;
+}
+.expr img.g { opacity: 0.7; }  /* top line slightly lighter, like before */
 
 /* ---- Invisible hit-zone buttons ---- */
 .key {
